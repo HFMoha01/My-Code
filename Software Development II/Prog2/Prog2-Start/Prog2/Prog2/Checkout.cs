@@ -1,7 +1,7 @@
 ﻿// Program 2
 // CIS 200-01
 // Due: 3/09/2020
-// By: T1681
+// By: Hasan Mohammad
 //
 // File:Checkout.cs
 // This file creates a GUI interface that allows a user to Checkout an item from the library 
