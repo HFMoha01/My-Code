@@ -1,7 +1,7 @@
 ﻿// Program 1A
 // CIS 200-01
 // Due: 2/13/2020
-// By: Andrew L. Wright (Students use Grading ID)
+// By: T1681
 
 // File: LibraryPeriodical.cs
 // This file creates an abstract LibraryPeriodical class that adds
