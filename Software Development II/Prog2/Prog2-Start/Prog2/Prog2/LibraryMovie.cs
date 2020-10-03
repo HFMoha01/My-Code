@@ -1,7 +1,7 @@
 ﻿// Program 1A
 // CIS 200-01
 // Due: 2/13/2020
-// By: Andrew L. Wright (Students use Grading ID)
+// By: Hasan Mohammad
 
 // File: LibraryMovie.cs
 // This file creates a concrete LibraryMovie class that adds
