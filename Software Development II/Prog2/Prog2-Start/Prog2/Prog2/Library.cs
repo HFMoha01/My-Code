@@ -1,7 +1,7 @@
 ﻿// Program 2
 // CIS 200-01
 // Spring 2020
-// By: Andrew L. Wright
+// By: Hasan Mohammad
 
 // File: Library.cs
 // This file creates a basic Library class that stores a list
