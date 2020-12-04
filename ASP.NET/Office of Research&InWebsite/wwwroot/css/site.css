@@ -1,0 +1,245 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/* Provide sufficient contrast against white background 
+
+    Uofl Red : #AD0000
+    Uofl Black: #000000
+    Uofl white: #FFFFFF
+
+
+*/
+
+/* Images*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/*Nav style*/
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+
+}
+
+a {
+  color: white;
+}
+
+    a:hover {
+        color: #AD0000;
+    }
+
+ a.btn {
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:initial;
+        }
+
+
+
+ 
+ /* button styles*/
+
+
+.btn-primary {
+    background-color: #AD0000 !important;
+    border: none;
+    color: white !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font: gotham-book;
+    font-weight:bold;
+    
+}
+
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/*Main Body Style*/
+body {
+    background-color:#000000;
+    color:white;
+    font-weight:bold;
+       
+}
+
+
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+
+.border-top {
+  border-top:  1px solid #e5e5e5;
+}
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+
+}
+
+/*Header style*/
+
+h1{
+    text-align:center;
+    font-weight:bold;
+}
+
+h5{
+    font-weight:bold;
+
+}
+
+h3 {
+    font-weight: bold;
+}
+
+hr.new1 {
+    border: 2px solid white;
+    border-radius: 1px;
+}
+
+/*Calendar Style*/
+.localist-widget {
+    color: black;
+}
+
+.localist_widget_container {
+    background-color: black !important;
+}
+
+.lw_event_item {
+    color: white;
+    background-color: black !important;
+}
+
+
+
+.localist_widget_container li a {
+    color: white;
+}
+
+    .localist_widget_container li a:hover {
+        color: #AD0000;
+    }
+
+
+
+.localist_widget_container li a {
+    color: white !important;
+    text-decoration: underline;
+}
+
+    .localist_widget_container li a:hover {
+        color: #AD0000;
+    }
+
+    .localist_widget_container li a:link {
+        color: #AD0000;
+        text-decoration:underline;
+    }
+
+.localist_widget_container .action_button a {
+    background-color: white !important;
+    color: black;
+}
+
+.localist_minicalendar_pager a {
+    background-color: #AD0000 !important;
+}
+
+.localist_minicalendar_page_heading h1 {
+    color: white !important;
+}
+
+.localist_minicalendar_minicalendar td a:hover {
+    background-color: #AD0000 !important;
+}
+
+
+
+
+
+/*Card styles*/
+.card.new1 {
+    background-color: black;
+    color:white;
+    font-weight:bold;
+    
+}
+
+.card-body{
+
+    font-weight:bold;
+}
+
+.boxed{
+
+    border:5px solid white;
+}
+
+
+/*.card {
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+}
+
+*/
