@@ -1,7 +1,7 @@
 
 # Change the following values to match your deployment.
 $AaddsAdminUserUpn = "service@brickbridgeconsulting.com"
-$AzureSubscriptionId = "38fd1a05-a9d0-422f-b9c2-8b1f38a26477"
+$AzureSubscriptionId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 $ManagedDomainName = "brickbridgeconsulting.com"
 $ResourceGroupName = "CITRIX"
 $VnetName = "aadds-vnet"
