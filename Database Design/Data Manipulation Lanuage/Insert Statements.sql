@@ -109,3 +109,83 @@ INSERT INTO orders
 (order_id, customer_id, order_date)
 VALUES
 (5,null,'2016/05/01');
+
+INSERT INTO products
+(product_id, product_name, category_id)
+VALUES
+(1,'Pear',50);
+
+INSERT INTO products
+(product_id, product_name, category_id)
+VALUES
+(2,'Banana',50);
+
+INSERT INTO products
+(product_id, product_name, category_id)
+VALUES
+(3,'Orange',50);
+
+INSERT INTO products
+(product_id, product_name, category_id)
+VALUES
+(4,'Apple',50);
+
+INSERT INTO products
+(product_id, product_name, category_id)
+VALUES
+(5,'Bread',75);
+
+INSERT INTO products
+(product_id, product_name, category_id)
+VALUES
+(6,'Sliced Ham',25);
+
+INSERT INTO products
+(product_id, product_name, category_id)
+VALUES
+(7,'Kleenex',null);
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(100, 'Microsoft', 'Redmond', 'Washington');
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(200, 'Google', 'Mountain View', 'California');
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(300, 'Oracle', 'Redwood City', 'California');
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(400, 'Kimberly-Clark', 'Irving', 'Texas');
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(500, 'Tyson Foods', 'Springdale', 'Arkansas');
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(600, 'SC Johnson', 'Racine', 'Wisconsin');
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(700, 'Dole Food Company', 'Westlake Village', 'California');
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(800, 'Flowers Foods', 'Thomasville', 'Georgia');
+
+INSERT INTO suppliers
+(supplier_id, supplier_name, city, state)
+VALUES
+(900, 'Electronic Arts', 'Redwood City', 'California');
