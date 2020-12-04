@@ -20,11 +20,11 @@ var tableHTML = "<table id='eventTable'>" +
     "<caption>Upcoming Events</caption>" +
     "<tr><th>Date</th><th>Event</th><th>Price</th></tr>";
 
-/* 14 days older than thisDay Variable */
+/* Set the end date for the event list two weeks from the current date */
 var endDate = new Date(thisDay.getTime() + 14*24*60*60*1000);
 
 
-/* For Loop  see pg 756, 761 10-8  and logical operator 10-11 */          
+/* Loop through the eventDates array */
 
 for (var i = 0; i < eventDates.length; i++) {
         var eventDate = new Date(eventDates[i]);
@@ -32,11 +32,14 @@ for (var i = 0; i < eventDates.length; i++) {
         var eventTime = eventDate.toLocaleTimeString();
   
   
-  /* IF Statement 10-4, 10-12 see figure 9-25 */
-  if (thisDay <= eventDate && eventDate <= endDate) {
-        tableHTML += "<tr><td>" + eventDay + "@" + eventTime + "</td>" + "<td>" + eventDescriptions[i] + "</td>" + "<td>" + eventPrices[i] + "</td>" + "</tr>"
-    
-        }
+/* If the event date is within the two-week window, display it on the page */
+    if (thisDay <= eventDate && eventDate <= endDate) {
+        tableHTML += "<tr>";
+        tableHTML += "<td>" + eventDay + " @ " + eventTime + "</td>";
+        tableHTML += "<td>" + eventDescriptions[i] + "</td>";
+        tableHTML += "<td>" + eventPrices[i] + "</td>";
+        tableHTML += "</tr>";
+    }
         
     }
  
