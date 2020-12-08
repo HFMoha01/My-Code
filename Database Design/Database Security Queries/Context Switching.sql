@@ -1,5 +1,5 @@
 
--- Source: SAMS SQL Server 2008R2
+
 
 -- 1. Explicit Context Switching
 
@@ -33,13 +33,13 @@ Use AdventureWorks2016CTP3;
 --selecting from the Sales.Customer table
 DENY SELECT ON sales.customer TO Public
 
--- We can check that a user TestUserTmp cannot select from the
+-- Checking that a user TestUserTmp cannot select from the
 -- Sales.Customer table using the EXECUTE AS statement
 -- SELECT TOP number|percent column_name(s) FROM table_name
 -- The TOP clause is used to specify the number of records to return
 EXECUTE AS USER = 'TestUserTmp'
 SELECT TOP 1 * FROM sales.customer
--- Screen shot #1 for the output is required 
+ 
 
 -- Revert to the previous execution context.
 REVERT
@@ -74,12 +74,13 @@ CREATE PROCEDURE dbo.usp_TestExecutionContext
 WITH EXECUTE AS 'TestUserTmp'
 AS SELECT USER_NAME() as 'User'
 
+
 -- Set the user to someone other than TestUserTmp to test the
 -- implicit EXECUTE AS
 SETUSER 'dbo'
 EXEC usp_TestExecutionContext
 SETUSER
--- Screen shot required
+
 
 USE master
 go

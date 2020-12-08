@@ -1,6 +1,5 @@
 /* Database Oldhouse Creation
-- On the Proxmox server, you have to create the Oldhouse database if you don't have it.
-- Use the attached script "Oldhouse-Table-Create (Encryption).sql" to create the Oldhouse database. 
+ 
 */ 
  
 -- Check out the existence of Service Master Key, Database Master Key
@@ -27,7 +26,7 @@ GO
 -- Display the original table
 select * from dbo.cust
 go
-/* Task #1: Show the original table in a screen shot. */
+
 
 
 -- Create a copy of the dbo.cust table into cust_encrypt table
@@ -42,7 +41,7 @@ where 1 = 2
 select  * from dbo.cust_encrypt
 go
 
--- Now, you can populate the cust_encrypt table with rows 
+-- populate the cust_encrypt table with rows 
 -- from the original table after encrypting using EncryptByPassPhrase function
 -- Populate the cust_encrypt table 
 declare @passphrase varchar(128)
@@ -62,7 +61,7 @@ from dbo.cust
 -- Display the encrypted table
 select * from dbo.cust_encrypt
 go
-/* Task #2: Show the encrypted table in a screen shot. Also, explain why we need to change the data type for encryption. */
+/
 
 
 --------------------------------------------------------------------------
@@ -89,11 +88,11 @@ Truncate table dbo.cust_encrypt
 
 USE Oldhouse;
 
--- First, decrypt the key using the BillingCert certificate
+-- decrypt the key using the BillingCert certificate
 OPEN SYMMETRIC KEY BillingSymKey
      DECRYPTION BY CERTIFICATE BillingCert
 
--- Now, insert the rows using the symmetric key encrypted by the certificate
+-- insert the rows using the symmetric key encrypted by the certificate
 insert dbo.cust_encrypt (
        fname,
        lname,
@@ -108,7 +107,7 @@ from dbo.cust
 -- Display the encrypted table
 select * from dbo.cust_encrypt
 go
-/* Task #3: Show the encrypted table in a screen shot. Also, explain the encryption process after Task #2. */
+
 
 
 -- Now, an authorized user can retrieve the data
@@ -122,9 +121,7 @@ select fname,
 	   cardnumber = convert(nvarchar(25), DecryptByKey(cardnumber_encrypt))
 from dbo.cust_encrypt
 go
-/* Task #4: Show the encrypted table in a screen shot. Also, explain the decryption process after Task #3. 	*/
-/* Did you get the original data back? If not, explain what's going on? 												*/ 
-/* Hint: Check out the current data type of cardnumber with the original one 								*/
+							*/
 
 
 CLOSE SYMMETRIC KEY BillingSymKey
@@ -146,7 +143,6 @@ DROP MASTER KEY
 
 -----------------------------------------------------------------
 -- 3. Transparent Data Encryption
--- Test TDE at home. Do not execute TDE in the Lab. 
 -----------------------------------------------------------------
 
 USE master;

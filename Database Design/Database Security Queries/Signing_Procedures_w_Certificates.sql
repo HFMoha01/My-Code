@@ -1,6 +1,6 @@
 
 /* Example of Signing Procedures w/ Certificates
-Source: www.sommarskog.se/grantperm.html#Certificates
+
 */ 
 
 USE master
@@ -69,14 +69,14 @@ SELECT USER_NAME()
 -- First run the unsigned procedure. This gives a permission error.
 EXEC Unsigned_SP
 go
--- Screen shot required
+
 
 -- Then run the signed procedure. Now we get the data back.
 EXEC Example_SP
 go
--- Screen shot required
 
--- Become ourselves again.
+
+
 REVERT
 go
 

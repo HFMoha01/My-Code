@@ -1,5 +1,5 @@
 /* Dynamic Data Masking 
-   The following code is based on: "www.red-gate.com"
+  
 */
 
 

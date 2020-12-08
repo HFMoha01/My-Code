@@ -1,7 +1,4 @@
-/* Row level security
-   This example is from the following: 
-https://sqlwithmanoj.com/2015/07/13/implementing-row-level-security-rls-with-sql-server-2016/
-*/ 
+/* Row level security Concepts*/ 
 
 USE master;
 GO
@@ -12,7 +9,7 @@ GO
 USE EmpDB_RLS;
 GO
   
--- Step 1.a. Let’s create some test accounts: I will create three users for:
+-- Create test accounts:
 CREATE USER userCEO WITHOUT LOGIN;
 GO
 CREATE USER userHR WITHOUT LOGIN;
@@ -51,7 +48,7 @@ GO
 SELECT * FROM dbo.Employees; -- 8 rows
 GO
 
--- The Traditional way to setup the Row Level Security till now was as follows 
+-- Traditional way to setup the Row Level Security till now was as follows 
 
 -- Stored Procedure with User-Name passed as parameter:
 CREATE PROCEDURE dbo.uspGetEmployeeDetails (@userAccess NVARCHAR(50))
@@ -72,7 +69,7 @@ GO
 EXEC dbo.uspGetEmployeeDetails @userAccess = 'userCEO' -- all 8 rows
 GO
 
--- Step 1.b. Grant Read/SELECT access on the dbo.Employee table to all 3 users:
+--Grant Read/SELECT access on the dbo.Employee table to all 3 users:
 GRANT SELECT ON dbo.Employees TO userCEO;
 GO
 GRANT SELECT ON dbo.Employees TO userHR;
@@ -80,7 +77,7 @@ GO
 GRANT SELECT ON dbo.Employees TO userFin;
 GO
  
--- Step 2. Let’s create an Inline Table-Valued Function to write our Filter logic:
+--Inline Table-Valued Function to write our Filter logic:
 /*This function returns value 1 when:
 – a row in the MgrCode (i.e. the Manager Code) column is the same as the user executing the query (@@mgrCode = USER_NAME())
 – or if the user executing the query is the Top Boss user (USER_NAME() = ‘userCEO’)
@@ -104,11 +101,11 @@ ON dbo.Employees
 WITH (STATE = ON); -- The state must be set to ON to enable the policy.
 GO
 
--- Now let’s again check the records after applying “Row Level Security”:
+-- Check the records after applying “Row Level Security”:
 SELECT * FROM dbo.Employees; -- 0 rows, 
 GO
 
--- Let’s check the 3 users we created and provided them customized access to the dbo.Employee table and rows in it:
+-- 3 users with customized access to the dbo.Employee table and rows in it:
 
 -- Execute as our immediate boss userHR (3 rows): 
 EXECUTE AS USER = 'userHR';
