@@ -1,5 +1,7 @@
 
-/* Example of Signing Procedures w/ Certificates
+/* 
+Ownership chaining
+Example of Signing Procedures w/ Certificates
 
 */ 
 
