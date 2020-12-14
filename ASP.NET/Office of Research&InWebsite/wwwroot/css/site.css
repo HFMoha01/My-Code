@@ -31,7 +31,7 @@ a.navbar-brand {
 }
 
 a {
-  color: white;
+  color: lightgrey;
 }
 
     a:hover {
@@ -55,7 +55,7 @@ a {
 .btn-primary {
     background-color: #AD0000 !important;
     border: none;
-    color: white !important;
+    color: lightgray !important;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -69,7 +69,7 @@ a {
 
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #fff;
+    color: lightgray;
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
@@ -77,8 +77,8 @@ a {
 /*Main Body Style*/
 body {
     background-color:#000000;
-    color:white;
-    font-weight:bold;
+    color:lightgray;
+    
        
 }
 
@@ -152,7 +152,7 @@ h3 {
 }
 
 hr.new1 {
-    border: 2px solid white;
+    border: 2px solid lightgrey;
     border-radius: 1px;
 }
 
@@ -166,14 +166,14 @@ hr.new1 {
 }
 
 .lw_event_item {
-    color: white;
+    color:lightgrey;
     background-color: black !important;
 }
 
 
 
 .localist_widget_container li a {
-    color: white;
+    color: lightgrey;
 }
 
     .localist_widget_container li a:hover {
@@ -183,7 +183,7 @@ hr.new1 {
 
 
 .localist_widget_container li a {
-    color: white !important;
+    color: lightgray !important;
     text-decoration: underline;
 }
 
@@ -206,7 +206,7 @@ hr.new1 {
 }
 
 .localist_minicalendar_page_heading h1 {
-    color: white !important;
+    color: lightgrey !important;
 }
 
 .localist_minicalendar_minicalendar td a:hover {
@@ -220,14 +220,13 @@ hr.new1 {
 /*Card styles*/
 .card.new1 {
     background-color: black;
-    color:white;
-    font-weight:bold;
+    
+  
     
 }
 
-.card-body{
-
-    font-weight:bold;
+.card-body {
+    color: lightgrey !important;
 }
 
 .boxed{
